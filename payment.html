@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  </head>
+  <body class="container">  
+    <form user-data="form">
+      <!--  -->
+      <h1>Payment form</h1>
+      <p>
+        Required fields are followed by <strong><abbr title="required">*</abbr></strong
+        >.
+      </p>
+        <h2>Contact information</h2>
+        <legend>Title</legend>
+        <div class="radio">
+          <label><input type="radio" name="title" value="Captain" checked />Captain</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="title" value="General" />General</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="title" value="Sergeant" />Sergeant</label>
+        </div>
+        <br/>
+        <legend>Name & Email</legend>
+        <p>
+          <label for="name">
+            <span>Name: </span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input class="form-control" type="text" id="name" name="username" required autofocus pattern="[a-zA-Z\s]+" />
+        </p>
+        <p>
+          <label for="mail">
+            <span>E-mail: </span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input class="form-control" type="email" id="mail" name="usermail" required/>
+        </p>
+      </section>
+      <section>
+        <h2>Payment information</h2>
+        <p>
+          <label for="card">
+            <span>Card type:</span>
+          </label>
+          <select id="card" name="usercard" required>
+            <option value="visa">Visa</option>
+            <option value="mc">Mastercard</option>
+            <option value="amex">American Express</option>
+          </select>
+        </p>
+        <p>
+          <label for="number">
+            <span>Card number:</span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="tel" id="number" name="cardnumber" required/>
+        </p>
+        <p>
+          <label for="date">
+            <span>Expiration date</span>
+            <em>(formatted as mm/dd/yyyy):</em>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="date" id="date" name="expiration" required/>
+        </p>
+      </section>
+      <section>
+        <div id="modal" class="modal">
+          <p id="thanks">You shouldn't see this.</p>
+          <a href="#" rel="modal:close">Close</a>
+        </div>
+        <p>
+          <button class="btn btn-primary" type="submit">Validate the payment</button>
+        </p>
+      </section>
+    </form>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  
+  <script src="scripts/checklist.js" charset="utf-8"></script>
+  <script src="scripts/formhandler.js" charset="utf-8"></script>
+  <script src="scripts/datastore.js" charset="utf-8"></script>
+  <script src="scripts/truck.js" charset="utf-8"></script>
+  <script src="scripts/main.js" charset="utf-8"></script>
+</html>
